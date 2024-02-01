@@ -1,0 +1,8 @@
+<!-- res/drawable/rainy_gradient.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:type="linear"
+        android:startColor="#B0BEC5"
+    android:endColor="#78909C"
+    android:angle="135"/>
+</shape>

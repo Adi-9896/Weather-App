@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">weather</string>
+    <string name="todo">TODO</string>
+    <string name="todos">TODO</string>
+    <string name="ss">TODO</string>
+    <string name="sss">TODO</string>
+    <string name="ssssss">TODO</string>
+    <string name="adsddwdw">TODO</string>
+    <string name="xsx">Pressure</string>
+    <string name="humidity">Humidity</string>
+    <string name="windspeed">Windspeed</string>
+    <string name="ada">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="temprature">Temprature</string>
+    <string name="_100">100</string>
+    <string name="yamunanagar">Yamunanagar</string>
+    <string name="day_14">Day 14</string>
+    <string name="feels_like_18">Feels like 18</string>
+    <string name="night_14">Night 14</string>
+    <string name="_100s">100</string>
+    <string name="sasas">TODO</string>
+    <string name="sasasas">100</string>
+    <string name="ccccc">100</string>
+    <string name="_15">15°</string>
+    <string name="sunsset">100</string>
+    <string name="dizzel">Dizzel</string>
+</resources>

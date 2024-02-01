@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mist"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/maibackfground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/sasas"
+        android:src="@drawable/mist"
+        tools:ignore="ImageContrastCheck">
+
+    </ImageView>
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:indeterminateTintMode="src_atop"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:indeterminateTint="#2880ED"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:indeterminateTint="@android:color/black"
+        android:theme="@style/CustomSearchView"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seach"
+        android:gravity="center"
+        android:inputType="text"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search city..." />
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_view">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/blurBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/blur"
+                android:visibility="gone" />
+
+
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="13dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dateandtime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:drawablePadding="5dp"
+                    android:text="@string/yamunanagar"
+                    android:textColor="@color/black"
+                    android:textSize="21.5sp"
+                    app:drawableLeftCompat="@drawable/loctaion">
+
+                </TextView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/day_max"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/day_14"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        tools:ignore="TextContrastCheck">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/day_min"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/night_14"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        tools:ignore="TextContrastCheck" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        android:id="@+id/temprature"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/_15"
+                        android:textColor="@color/white"
+                        android:textSize="86sp"
+                        tools:ignore="TextContrastCheck" />
+
+                    <ImageView
+                        android:id="@+id/weathericon"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/sunnys"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/feelslike"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/feels_like_18"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        tools:ignore="TextContrastCheck">
+
+                    </TextView>
+
+
+                    <TextView
+                        android:id="@+id/weather_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/dizzel"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        tools:ignore="TextContrastCheck">
+
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="40dp"
+            android:elevation="5dp"
+            android:paddingBottom="25dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp"
+            app:cardMaxElevation="5dp"
+            app:strokeColor="@android:color/transparent"
+            tools:ignore="ExtraText">>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearlayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/mist"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_horizontal"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/pressure"
+                                tools:ignore="ImageContrastCheck">
+
+                            </ImageView>
+
+                            <TextView
+                                android:id="@+id/pressure"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:gravity="center"
+                                android:text="@string/sasasas"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                tools:ignore="TextContrastCheck">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="center"
+                                android:text="@string/xsx"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp,TextContrastCheck">
+
+                            </TextView>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_horizontal"
+                                android:contentDescription="@string/todos"
+                                android:src="@drawable/humidity"
+                                tools:ignore="ImageContrastCheck"></ImageView>
+
+                            <TextView
+                                android:id="@+id/humidity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:gravity="center"
+                                android:text="@string/_100s"
+                                android:textColor="#F5F5F5"
+                                android:textSize="20sp"
+                                tools:ignore="TextContrastCheck">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="center"
+                                android:text="@string/humidity"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp,TextContrastCheck">
+
+                            </TextView>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/wind"
+                                android:contentDescription="@string/ss"></ImageView>
+
+                            <TextView
+                                android:id="@+id/windspeed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:gravity="center"
+                                android:text="100"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                tools:ignore="HardcodedText,TextContrastCheck">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="center"
+                                android:text="@string/windspeed"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp,TextContrastCheck">
+
+                            </TextView>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/mist"
+                    android:orientation="horizontal"
+                    android:padding="0dp"
+                    android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_horizontal"
+                                android:contentDescription="@string/sss"
+                                android:src="@drawable/sunrise"
+                                tools:ignore="ImageContrastCheck"></ImageView>
+
+                            <TextView
+                                android:id="@+id/sunrise"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:gravity="center"
+                                android:text="@string/ccccc"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                tools:ignore="TextContrastCheck">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="center"
+                                android:text="@string/ada"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp,TextContrastCheck">
+
+                            </TextView>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_horizontal"
+                                android:contentDescription="@string/ssssss"
+                                android:src="@drawable/sunset"
+                                tools:ignore="ImageContrastCheck"></ImageView>
+
+                            <TextView
+                                android:id="@+id/sunset"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:gravity="center"
+                                android:text="@string/sunsset"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                tools:ignore="TextContrastCheck">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="center"
+                                android:text="@string/sunset"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp,TextContrastCheck">
+
+                            </TextView>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_horizontal"
+                                android:contentDescription="@string/adsddwdw"
+                                android:src="@drawable/temprature"
+                                tools:ignore="ImageContrastCheck"></ImageView>
+
+                            <TextView
+                                android:id="@+id/Temprature"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:gravity="center"
+                                android:text="@string/_100"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                tools:ignore="TextContrastCheck">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="center"
+                                android:text="@string/temprature"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp,TextContrastCheck">
+
+                            </TextView>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
